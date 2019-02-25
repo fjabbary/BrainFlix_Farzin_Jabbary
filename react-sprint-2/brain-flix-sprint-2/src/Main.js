@@ -47,10 +47,15 @@ class Main extends Component {
       headers: {
         'Content-Type': 'application/json'
       }
-    }).then(
+    }).then(res => {
+      const copy = Array.from(this.state.commentData.comments)
+      copy.push(res.data)
       this.setState({
-        commentData: { ...this.state.commentData, comments: [...this.state.commentData.comments, newComment] }
+        commentData: { ...this.state.commentData, comments: copy }
       })
+    }
+
+
     )
     e.target.addComment.value = "";
     e.preventDefault();
@@ -58,21 +63,21 @@ class Main extends Component {
 
   removeComment = id => {
     console.log(id);
-    const commentsArr = this.state.commentData.comments;
-
-    const updatedComments = commentsArr.filter(oneComment => {
-      return oneComment.id !== id;
-    });
 
     let videoId = this.props.match.params.id;
+    let getUrl = `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=farzinjabbary`
     axios({
       method: 'DELETE',
       url: `https://project-2-api.herokuapp.com/videos/${videoId}/comments/${id}?api_key=farzinjabbary`
     })
-      .then(
-        this.setState({
-          commentData: { ...this.state.CommentData, comments: updatedComments }
+      .then(res => {
+        console.log(res.data)
+        axios.get(getUrl).then(result => {
+          this.setState({
+            commentData: result.data
+          })
         })
+      }
       )
   };
 
@@ -96,3 +101,6 @@ class Main extends Component {
 }
 
 export default Main;
+// this.setState({
+//   commentData: { ...this.state.CommentData, comments: updatedComments }
+// })
