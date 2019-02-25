@@ -1,0 +1,86 @@
+.upload {
+  width: 1080px;
+  margin: auto;
+
+  &__container {
+    display: flex;
+  }
+
+  &__header {
+    border-bottom: 2px solid rgb(231, 230, 230);
+    padding-bottom: 20px;
+  }
+
+  &__left {
+    width: 344px;
+    margin-right: 24px;
+
+    &--title {
+      color: rgb(128, 128, 128);
+      font-size: 75%;
+    }
+
+    &--image {
+      width: 100%;
+      height: 183px;
+    }
+  }
+
+  &__right {
+    width: 873px;
+
+    &--label {
+      color: rgb(128, 128, 128);
+      font-size: 75%;
+    }
+  }
+
+  &__form {
+
+    &--title, &--description {
+      width: 97%;
+      background: rgb(250, 250, 250);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    &--title {
+      margin-bottom: 24px;
+    }
+
+    &--description {
+      height: 80px;
+    }
+
+    &--line {
+      margin: 40px 0;
+      height: 1px;
+      background: #ccc;
+    }
+
+    &--cancel {
+      background: none;
+      border: none;
+      color: blue;
+      float: right;
+      position: relative;
+      top: 15px;
+    }
+
+    &--publish {
+      float: right;
+      background: $color-light-blue;
+      color: #fff;
+      border: none;
+      padding: 15px 20px;  
+      margin-left: 48px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    &--publish:hover {
+      background: darken($color-light-blue, 30%)
+    }
+  }
+}
