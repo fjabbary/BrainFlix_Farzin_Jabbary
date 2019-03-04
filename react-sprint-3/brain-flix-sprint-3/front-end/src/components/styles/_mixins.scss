@@ -1,0 +1,10 @@
+@mixin icon {
+  display: inline-block;
+  width: 40px;
+  height: 35px;
+}
+
+@mixin header-1-desktop {
+  font-size: 36px;
+  line-height: 44px;
+}

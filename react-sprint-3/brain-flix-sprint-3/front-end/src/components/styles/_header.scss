@@ -1,0 +1,77 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirNext LT Pro";
+}
+
+.header {
+  width: 1080px;
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+
+  &__left {
+    margin-right: 509px;
+  }
+
+  &__right {
+    display: flex;
+    width: 450px;
+    position: relative;
+
+    &--magnifier {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      background: url(./Icons/SVG/Icon-search.svg) no-repeat;
+      position: absolute;
+      left: 7px;
+      top: 17px;
+    }
+
+    &--search {
+      width: 236px;
+      height: 48px;
+      margin-right: 24px;
+      border-radius: $border-radius;
+      border: 1px solid $color-mercury;
+      padding-left: 30px;
+    }
+
+    &--plus {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      background: url(./Icons/SVG/Icon-upload.svg) no-repeat;
+      position: absolute;
+      right: 157px;
+      top: 17px;
+
+    }
+
+    &--btn {
+      background: $color-light-blue;
+      border: none;
+      color: $color-white;
+      padding: 10px 20px 10px 40px;
+      margin-right: 24px;
+      border-radius: $border-radius;
+      cursor: pointer;
+      height: 100%;
+    }
+
+    &--btn:hover {
+      background: darken($color-light-blue, $amount: 20%);
+    }
+
+    &--photo {
+      width: 48px;
+      height: 48px;
+      display: inline-block;
+      border-radius: 50%;
+    }
+  }
+}

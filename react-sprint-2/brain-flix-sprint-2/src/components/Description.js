@@ -38,7 +38,7 @@ export default class Descriptions extends Component {
           <p>
             {commentData.description}
           </p>
-          <b><span>{commentData.comments.length}</span> Comment</b><br />
+          <b><span>{(commentData.comments || []).length}</span> Comment</b><br />
         </div>
       </div>
     )

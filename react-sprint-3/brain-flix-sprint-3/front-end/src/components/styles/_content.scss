@@ -1,0 +1,136 @@
+.content {
+  display: flex;
+  width: 1080px;
+  margin: 0 auto;
+
+  &__text {
+    width: 712px;
+    border-right: 2px solid $color-mercury;
+
+    &--title {
+      border-bottom: 2px solid $color-mercury;
+      padding-bottom: 16px;
+    }
+
+    &--header {
+      @include header-1-desktop();
+      margin-bottom: 10px;
+    }
+
+    &--name {
+      font-weight: bold;
+      margin-right: 20px;
+    }
+
+    &--date {
+      color: $color-silver;
+      margin-right: 270px;
+    }
+
+    &--view {
+      width: 22px;
+      height: 16px;
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      background: url(./Icons/SVG/Icon-views.svg) no-repeat;
+    }
+
+    &--viewCount {
+      margin-right: 30px;
+    }
+
+    &--like {
+      width: 22px;
+      height: 16px;
+      display: inline-block;
+      background: url(./Icons/SVG/Icon-likes.svg) no-repeat;
+      position: relative;
+      top: 3px;
+      cursor: pointer;
+    }
+
+    &--like:hover{
+      transform: scale(1.1)
+    }
+
+    &--desc {
+      padding: 20px 0 0 0;
+      width: 500px;
+    }
+
+    &--desc p {
+      margin-bottom: 60px;
+    }
+
+    &--commentInput {
+      display: flex;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    &--commentInput img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 32px;
+    }
+
+    &--commentInput input {
+      width: 436px;
+      height: 44px;
+      margin-right: 16px;
+      padding-left: 16px;
+      border-radius: $border-radius;
+      border: 2px solid $color-mercury;
+      letter-spacing: 2px;
+    }
+
+    &--commentInput button {
+      background: $color-light-blue;
+      border: none;
+      color: $color-white;
+      padding: 0 30px;
+      border-radius: $border-radius;
+      height: 48px;
+      cursor: pointer;
+    }
+
+    &--commentInput label {
+      position: absolute;
+      color: $color-silver;
+      position: relative;
+    }
+
+    &--commentInput button:hover {
+      background: darken($color: $color-light-blue, $amount: 20%);
+    }
+  }
+
+  &__videoList {
+    width: 368px;
+    padding-left: 24px;
+
+    &--header {
+      color: $color-silver;
+      margin: 40px 0;
+    }
+
+    &--item {
+      display: flex;
+      height: 70px;
+      margin-bottom: 25px;
+    }
+
+    &--left img {
+      width: 120px;
+      height: 100%;
+      margin-right: 16px;
+      border-radius: 2px;
+    }
+
+    &--right h4 {
+      margin: 0;
+    }
+  }
+}

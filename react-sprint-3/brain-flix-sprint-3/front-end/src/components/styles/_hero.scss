@@ -1,0 +1,63 @@
+.hero {
+  width: 100%;
+  background: $color-black;
+  height: 540px;
+  position: relative;
+
+  &__content {
+    width: 1080px;
+    height: 540px;
+    margin: 0 auto;
+
+    &--main {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    position: absolute;
+    left: 264px;
+    bottom: 16px;
+
+    &--play {
+      @include icon();
+      background: url() no-repeat;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: $border-radius;
+      background-position: 14px 8px;
+      margin-right: 16px;
+    }
+
+    &--indicator {
+      background: url(./Icons/PNG/Icon-scrubber-control.png) no-repeat;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      width: 751px;
+      height: 35px;
+      background-position: 10px 9px;
+      color: $color-white;
+      text-align: right;
+      padding-right: 16px;
+      line-height: 35px;
+      margin-right: 16px;
+    }
+
+    &--fullScreen {
+      @include icon();
+      background: url(./Icons/PNG/Icon-fullscreen.png) no-repeat;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-position: 12px 10px;
+      margin-right: 5px;
+    }
+
+    &--volume {
+      @include icon();
+      background: url() no-repeat;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-position: 12px 10px;
+    }
+  }
+}
+

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.scss";
-import CommentData from "./externalData/CommentData";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Content from "./components/Content";
@@ -8,7 +7,7 @@ import axios from 'axios';
 
 class Main extends Component {
   state = {
-    commentData: CommentData
+    commentData: {}
   };
 
   componentDidMount() {
@@ -54,8 +53,6 @@ class Main extends Component {
         commentData: { ...this.state.commentData, comments: copy }
       })
     }
-
-
     )
     e.target.addComment.value = "";
     e.preventDefault();

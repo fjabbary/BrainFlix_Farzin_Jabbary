@@ -8,7 +8,7 @@ export default class Content extends Component {
   render() {
     const submit = this.props.submit;
     const commentData = this.props.commentData;
-    const commentsArr = this.props.commentData.comments;
+    const commentsArr = this.props.commentData.comments || [];
 
     const commentJSX = commentsArr.map((commentObj, index) => {
       return (
